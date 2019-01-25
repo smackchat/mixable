@@ -1,6 +1,4 @@
-<div style="background-image: Fly.png; width: 100px" back>
-
-</div>
+<img src="Fly.png" style="width: 100px; height: 100px"/>
 
 
 
