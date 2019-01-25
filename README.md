@@ -10,21 +10,21 @@ https://firebasestorage.googleapis.com/v0/b/startup-debate.appspot.com/o/images%
 <p style="text-align: center; font-size: 15px">   Open Source </p>
 
 
-##TABLE OF CONTENTS
+TABLE OF CONTENTS
 
-###GETTING STARTED 
+GETTING STARTED 
 
 * SETUP
 * USING 
 
-###WHY MIXABLE?  
+WHY MIXABLE?  
 
-###DETAILS FOR CONTRIUTORS
+DETAILS FOR CONTRIUTORS
 * TEST
 * HOW IT WORKS
 
 
-##GETTING STARTED 
+GETTING STARTED 
 
 * SETUP  
 		How to set up in other peoples projects
@@ -62,17 +62,18 @@ https://firebasestorage.googleapis.com/v0/b/startup-debate.appspot.com/o/images%
   	The createMixableClass() will automatically create the **multiple inheritance** class.
  
       
-##	WHY MIXABLE?
+WHY MIXABLE?
 
 Mixables is an open source initiative for a multiple inheritance library.
 Which solves the multiple inheritance problem using mixins to literally move functions.
 
 We want to make it OpenSource because we could not find a better library than ours, and for the chance to grow it and share it with the community.
 
-##DETAILS FOR CONTRIUTORS
+ DETAILS FOR CONTRIUTORS
+ 
 * TEST
 
-The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and¬¬¬ a Animal. Thus we fall into multiple inheritance problem. The “Mixables” package solves multiple inheritance with performance and is easy to use.
+The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and a Animal. Thus we fall into multiple inheritance problem. The “Mixables” package solves multiple inheritance with performance and is easy to use.
 
 
 * HOW IT WORKS
