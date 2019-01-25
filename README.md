@@ -1,4 +1,5 @@
-<img src="Fly.png" style="width: 100px; height: 100px"/>
+
+<img src="Fly.png" width="100px" height="100px"/>
 
 
 
@@ -6,7 +7,7 @@
 
 <p style="text-align: center;">   a <i> multiple inheritance </i> library for js </p>
 
-![GitHub Logo](logo.jpg)
+<img src="logo.jpg" width="333px" height="100px"/>
 
 
 
