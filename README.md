@@ -9,7 +9,6 @@
 
 
 <h1>TABLE OF CONTENTS</h1>
-<hr>
 
 <h4>WHY MIXBLE?</h4> 
 
@@ -24,7 +23,6 @@
 * HOW IT WORKS
 
 <h1> WHY MIXABLE? </h1>
-<hr>
 
 Mixables is an open source initiative for a multiple inheritance library.
 Which solves the multiple inheritance problem using mixins to literally move functions.
@@ -33,7 +31,6 @@ We want to make it OpenSource because we could not find a better library than ou
 
 
 <h1>GETTING STARTED</h1>
-<hr>
 
 * SETUP  
 		How to set up in other peoples projects
@@ -73,7 +70,6 @@ We want to make it OpenSource because we could not find a better library than ou
       
 
 <h1>DETAILS FOR CONTRIUTORS</h1>
-<hr>
 TEST
 
 The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and¬¬¬ a Animal. Thus we fall into multiple inheritance problem. The “Mixables” package solves multiple inheritance with performance and is easy to use.
