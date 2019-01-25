@@ -5,7 +5,7 @@
 <p style="text-align: center;">   a <i> multiple inheritance </i> library for js </p>
 
 ![GitHub Logo](logo.jpg)
-<p style="text-align: center; font-size: 15px">   Open Source </p>
+
 
 
 <h1>TABLE OF CONTENTS</h1>
