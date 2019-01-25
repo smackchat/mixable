@@ -1,4 +1,4 @@
-<img src="fly.png"/>
+<img src="Fly.png"/>
 
 <h1 style="text-align: center; color: lightblue; font-size: 80px"> Mixable <h1/>
 
