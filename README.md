@@ -5,7 +5,7 @@
 
 <h1 style="text-align: center; color: lightblue; font-size: 80px"> Mixable <h1/>
 
-<p style="text-align: center;">   a <i> multiple inheritance </i> library for js </p>
+<h3 style="text-align: center;">   a <i> multiple inheritance </i> library for js </h3>
 
 <img src="logo.jpg" width="333px" height="100px"/>
 
