@@ -22,7 +22,9 @@
 * USING  
 
 <h4>DETAILS FOR CONTRIUTORS</h4>
+
 * TEST
+
 * HOW IT WORKS
 
 <h1> WHY MIXABLE? </h1>
