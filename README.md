@@ -1,4 +1,8 @@
-<img src="Fly.png"/>
+<div style="background-image: Fly.png; width: 100px" back>
+
+</div>
+
+
 
 <h1 style="text-align: center; color: lightblue; font-size: 80px"> Mixable <h1/>
 
@@ -25,7 +29,7 @@
 <h1> WHY MIXABLE? </h1>
 
 Mixables is an open source initiative for a multiple inheritance library.
-Which solves the multiple inheritance problem using mixins to literally move functions.
+Which solves the multiple inheritance problem using mixins to move functions.
 
 We want to make it OpenSource because we could not find a better library than ours, and for the chance to grow it and share it with the community.
 
