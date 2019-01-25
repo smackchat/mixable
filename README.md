@@ -4,9 +4,7 @@
 
 <p style="text-align: center;">   a <i> multiple inheritance </i> library for js </p>
 
-<img src='
-https://firebasestorage.googleapis.com/v0/b/startup-debate.appspot.com/o/images%2Fimageedit_5_5067187938.png?alt=media&token=e51207e3-9ec3-4c06-a1b6-f373d32add82
-' style="width:150px; height:50px; margin-left: 40%"/>
+![GitHub Logo](logo.jpg)
 <p style="text-align: center; font-size: 15px">   Open Source </p>
 
 
