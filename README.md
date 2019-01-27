@@ -1,5 +1,5 @@
 
-<img src="Fly.png" width="100px" height="100px"/>
+<img src="MixableLogo.jpg" width="100px" height="100px"/>
 
 
 
