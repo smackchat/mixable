@@ -1,16 +1,13 @@
+<p align="center" >
+	<img  src="MixableLogo.jpg" width="100px" height="100px"/>
+</p>
 
-<img src="MixableLogo.jpg" width="100px" height="100px"/>
+<h1 align="center" style=" color: lightblue; font-size: 80px"> Mixable <h1/>
 
-
-
-<h1 style="text-align: center; color: lightblue; font-size: 80px"> Mixable <h1/>
-
-<h3 style="text-align: center;">   a <i> multiple inheritance </i> library for js </h3>
-
-<img src="logo.jpg" width="333px" height="100px"/>
-
-
-
+<h3 align= "center">   a <i> multiple inheritance </i> library for js </h3>
+<p align="center">
+	<img src="logo.jpg" width="222px" height="50px"/>
+</p>
 <h1>TABLE OF CONTENTS</h1>
 
 <h4>WHY MIXBLE?</h4> 
