@@ -29,7 +29,7 @@
 
 <h1> WHY MIXABLE? </h1>
 
-Mixables is an open source initiative for a multiple inheritance library.
+Mixables is an open source initiative multiple inheritance library.
 Which solves the multiple inheritance problem using mixins to move functions.
 
 We want to make it OpenSource because we could not find a better library than ours, and for the chance to grow it and share it with the community.
