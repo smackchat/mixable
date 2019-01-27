@@ -68,6 +68,8 @@ We want to make it OpenSource because we could not find a better library than ou
 	    }
   
   	The createMixableClass() will automatically create the **multiple inheritance** class.
+	
+	To understand an example in use, check out our test file described below.
  
       
 
