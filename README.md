@@ -49,7 +49,7 @@ We want to make it OpenSource because we could not find a better library than ou
 	- if both the child and the parent define a method of the same name, then the child will overwrite, and you end up 	   with the child's version.
 
 
-	Such as this example which comes from the ./examples file in Mixable,
+	ex) from the ./examples directory in Mixable,
 		
 
 		const { createMixableClass } = require('../mixable')  
@@ -86,8 +86,8 @@ We want to make it OpenSource because we could not find a better library than ou
 	
 *  Edge Cases
 
-//edge case: extend on the functionality of parent.
-//in java is handeld through "super" call. This package fully replaces this method. There are ways
+
+	- edge case ex) extend on the functionality of parent. in java is handeld through "super" call. This package fully 	   replaces this method. There are tricks
 
 
  
