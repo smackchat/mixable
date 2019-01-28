@@ -42,10 +42,6 @@ We want to make it OpenSource because we could not find a better library than ou
 
 	Using **createMixableClass()** pass the Class you want as an object through the parameter.
 	
-	Include classes to inherit simply in an array.
-	constructor defined with underscore '_constructor'
-	the child are called before parent 
-	
 	Details about instantiating a MixableClass: 
 	- Include classes to inherit simply in an array.
 	- constructor defined with underscore '_constructor'
