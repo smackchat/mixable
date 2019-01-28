@@ -40,14 +40,20 @@ We want to make it OpenSource because we could not find a better library than ou
 
 * API references 
 
-	Using **createMixableClass()** pass the Class you want as an object in the parameter.
-	Include classes to inherit simply in an array. Such as this example
+	Using **createMixableClass()** pass the Class you want as an object through the parameter.
 	
-	Details about instantiating a MixableClass:
-	// child called before parent 
-	// _constructor defined with underscore
-	//if both the child and the parent define a method of the same name, then the child will overwrite, and you end up 	   with the child's version.
+	Include classes to inherit simply in an array.
+	constructor defined with underscore '_constructor'
+	the child are called before parent 
+	
+	Details about instantiating a MixableClass: 
+	- Include classes to inherit simply in an array.
+	- constructor defined with underscore '_constructor'
+	- the child are called before parent 
+	- if both the child and the parent define a method of the same name, then the child will overwrite, and you end up 	   with the child's version.
 
+
+	Such as this example which comes from the ./examples file in Mixable,
 		
 
 		const { createMixableClass } = require('../mixable')  
@@ -92,6 +98,7 @@ We want to make it OpenSource because we could not find a better library than ou
       
 
 <h1>DETAILS FOR CONTRIUTORS</h1>
+
 * TEST
 
 The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and an Animal. Thus we fall into multiple inheritance problem. The “Mixables” package solves multiple inheritance with performance and is easy to use.
