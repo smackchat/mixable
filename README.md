@@ -38,10 +38,15 @@ We want to make it OpenSource because we could not find a better library than ou
 		How to set up in other peoples projects
 
 
-* USING 
+* API references 
 
 	Using **createMixableClass()** pass the Class you want as an object in the parameter.
 	Include classes to inherit simply in an array. Such as this example
+	
+	Details about instantiating a MixableClass:
+	// child called before parent 
+	// _constructor defined with underscore
+	//if both the child and the parent define a method of the same name, then the child will overwrite, and you end up 	   with the child's version.
 
 		
 
@@ -68,8 +73,21 @@ We want to make it OpenSource because we could not find a better library than ou
 	    }
   
   	The createMixableClass() will automatically create the **multiple inheritance** class.
+	Returns a mixable class.
+	
+	instance.is() => fish.is(Animal) returns true (edited) 
+	Class.inheritsFrom()` => Swimmer.inheritsFrom(Animal) returns true
 	
 	To understand an example in use, check out our test file described below.
+	
+	
+	
+*  Edge Cases
+
+//edge case: extend on the functionality of parent.
+//in java is handeld through "super" call. This package fully replaces this method. There are ways
+
+
  
       
 
