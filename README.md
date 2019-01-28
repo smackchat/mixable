@@ -29,7 +29,7 @@
 Mixables is an open source initiative multiple inheritance library.
 Which solves the multiple inheritance problem using mixins to move functions.
 
-We want to make it OpenSource because we could not find a better library than ours, and for the chance to grow it and share it with the community.
+This is an OpenSource initiative because we could not find a more performant and easy to use library than ours, and for the ability to grow and share it with the community.
 
 
 <h1>GETTING STARTED</h1>
@@ -97,7 +97,8 @@ We want to make it OpenSource because we could not find a better library than ou
 
 * TEST
 
-The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and an Animal. Thus we fall into multiple inheritance problem. The “Mixables” package solves multiple inheritance with performance and is easy to use.
+	- The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and an Animal. Thus we fall into multiple inheritance problem. 
+
 
 
 
