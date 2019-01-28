@@ -8,7 +8,7 @@
 <p align="center">
 	<img src="logo.jpg" width="222px" height="50px"/>
 </p>
-<h1>TABLE OF CONTENTS</h1>
+<h1>Table of Contents</h1>
 
 <h4>WHY MIXBLE?</h4> 
 
@@ -24,7 +24,7 @@
 
 * HOW IT WORKS
 
-<h1> WHY MIXABLE? </h1>
+<h1> Why Mixable? </h1>
 
 Mixables is an open source initiative multiple inheritance library.
 Which solves the multiple inheritance problem using mixins to move functions.
@@ -32,7 +32,7 @@ Which solves the multiple inheritance problem using mixins to move functions.
 This is an OpenSource initiative because we could not find a more performant and easy to use library than ours, and for the ability to grow and share it with the community.
 
 
-<h1>GETTING STARTED</h1>
+<h1>Getting Started</h1>
 
 * SETUP  
 		How to set up in other peoples projects
@@ -93,7 +93,11 @@ This is an OpenSource initiative because we could not find a more performant and
  
       
 
-<h1>DETAILS FOR CONTRIUTORS</h1>
+<h1>Contributing</h1>
+
+
+
+The main purpose of this repository is to continue to evolve React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
 
 * TEST
 
