@@ -2,8 +2,7 @@
 	<img  src="MixableLogo.jpg" width="100px" height="100px"/>
 </p>
 
-<h1 align="center" style=" color: lightblue; font-size: 80px"> Mixable <h1/>
-
+<h1 align="center" style=" color: lightblue; font-size: 80px"> mixable <h1/>
 <h3 align= "center">   a <i> multiple inheritance </i> library for js </h3>
 <p align="center">
 	<img src="logo.jpg" width="222px" height="50px"/>
@@ -20,7 +19,7 @@
 
 <h4>Contributing</h4>
 
-* TEST
+* Test
 
 <h1> Why Mixable? </h1>
 
@@ -140,7 +139,7 @@ This is an OpenSource initiative because we could not find a more performant and
 The main purpose of this repository is to continue to evolve Mixible core. We are grateful to those who contribute to Mixible's system design.
 
 
-* TEST
+* Test
 
 In the directory where mixile is held, update and run 'yarn test' to perform tests on changes and to see if you made any changes that many have broken then system.
 
