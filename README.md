@@ -10,19 +10,17 @@
 </p>
 <h1>Table of Contents</h1>
 
-<h4>WHY MIXBLE?</h4> 
+<h4>Why Mixible?</h4> 
 
 
-<h4>GETTING STARTED</h4> 
+<h4>Getting Started</h4> 
 
-* SETUP
-* USING  
+* Setup
+* Using  
 
-<h4>DETAILS FOR CONTRIUTORS</h4>
+<h4>Contributing</h4>
 
 * TEST
-
-* HOW IT WORKS
 
 <h1> Why Mixable? </h1>
 
