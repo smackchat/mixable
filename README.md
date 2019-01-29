@@ -35,7 +35,7 @@ This is an OpenSource initiative because we could not find a more performant and
 <h1>Getting Started</h1>
 
 * SETUP  
-		How to set up in other peoples projects
+		npm install mixible
 
 
 * API references 
@@ -144,7 +144,9 @@ The main purpose of this repository is to continue to evolve Mixible core. We ar
 
 * TEST
 
-	- The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and an Animal. Thus we fall into multiple inheritance problem. 
+In the directory where mixile is held, update and run 'yarn test' to perform tests on changes and to see if you made any changes that many have broken then system.
+
+- The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and an Animal. Thus we fall into multiple inheritance problem. 
 
 
 
