@@ -29,7 +29,7 @@ it solves the multiple inheritance problem, and provides many useful features wh
 <h1>Getting Started</h1>
 
 * SETUP  
-		npm install mixible
+	yarn add mixible
 
 
 * API references 
