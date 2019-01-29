@@ -205,15 +205,15 @@ Flying Fish
 	    }
   
   	
-	Api references attached as properties to your new MixableClass.
+Api references attached as properties to your new MixableClass.
 	
-	MixableClass.inheritsFrom()
+MixableClass.inheritsFrom()
 	
-		ex) Swimmer.inheritsFrom(Animal) returns true
+- ex) Swimmer.inheritsFrom(Animal) returns true
 	
-	MixableClass.mixableMeta()
+MixableClass.mixableMeta()
 	
-		ex) FlyingFish.getMixableMeta(this) returns 
+- ex) FlyingFish.getMixableMeta(this) returns 
 		
 		{ name: 'FlyingFish',
 		      constructors:
@@ -223,19 +223,19 @@ Flying Fish
 			 { name: 'Animal', _constructor: [Function: _constructor] } ] 
 		}
 	
-	MixableClass.constructors()
-	
-		ex) Swimmer.constructors() returns
+MixableClass.constructors()
+
+- ex) Swimmer.constructors() returns
 		
 		[ { name: 'FlyingFish', _constructor: [Function: _constructor] },
 	      { name: 'Swimmer', _constructor: [Function: _constructor] },
 	      { name: 'Flyer', _constructor: [Function] },
 	      { name: 'Animal', _constructor: [Function: _constructor] } ]
 	      
+
+MixableClass.is() 
 	
-	MixableClass.is() 
-	
-		ex) FlyingFish.is(Animal) returns true
+- ex) FlyingFish.is(Animal) returns true
 	
 		
 	To understand an example in use, check out our test file described below in the "Contriuting" section.
