@@ -57,10 +57,11 @@ It solves the multiple inheritance problem, and provides many useful features wh
 	 
 	 
 	Details about instantiating a MixableClass: 
-		- Include classes to inherit simply in an array.
-		- constructor defined with underscore '_constructor'
-		- the child are called before parent 
-		- if both the child and the parent define a method of the same name, then the child will overwrite, and you 		    end up with the child's version.
+	
+	- Include classes to inherit simply in an array.
+	- constructor defined with underscore '_constructor'
+	- the child are called before parent 
+	- if both the child and the parent define a method of the same name, then the child will overwrite, and you 		    end up with the child's version.
 
 
 	use case scenario from the ./examples directory in Mixable,
