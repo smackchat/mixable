@@ -23,8 +23,9 @@
 
 <h1> Why mixable? </h1>
 
-mixable is a open source multiple inheritance library 
-it solves the multiple inheritance problem, and provides many useful features when using a mixable Class
+mixable is a open source multiple inheritance library.
+
+It solves the multiple inheritance problem, and provides many useful features when using a mixable Class
 
 <h1>Getting Started</h1>
 
