@@ -40,6 +40,8 @@ It solves the multiple inheritance problem, and provides many useful features wh
 
 	Using **createMixableClass()** pass as an object through the parameter, that holds this format
 	
+	which returns an instance of MixableClass
+	
 	
 	
 	 
@@ -48,7 +50,7 @@ It solves the multiple inheritance problem, and provides many useful features wh
 		 {
 		 name: DEFAULT_CLASS_NAME,
 		 inherits: [exclass1, exclass2],
-		 body: class { // inside here create new methods for specific class, also create constructor (read details and                  example below for how to write constructor},
+		 body: class { // inside here create new methods for specific class, also create constructor (read details and                  example below for how to write constructor0},
 		 staticProps: {}
 		}
 		)
@@ -62,19 +64,134 @@ It solves the multiple inheritance problem, and provides many useful features wh
 	- if both the child and the parent define a method of the same name, then the child will overwrite, and you end up 	   with the child's version.
 
 
-	ex) from the ./examples directory in Mixable,
+	ex use) from the ./examples directory in Mixable,
+	
+Animal:
+
+	    import { createMixableClass } from '../mixable'
+
+	    export const Animal = createMixableClass({
+
+		  name: 'Animal',
+		  body: class {
+
+		    static staticProp = 'static prop'
+
+		    static staticThing() {
+		      return 'static return'
+		    }
+
+		    static staticUsingClass() {
+		      return Animal.staticThing() + 'added bit'
+		    }
+
+		    exampleProp
+		    alive = true
+		    privateProp = false
+		    //explain in doc
+		    _constructor(params) {
+			console.log("hello")
+			this.exampleProp = 'example'
+			this.alive = true
+		    }
+
+		    die() { 
+		      this.alive = false
+		    }
+
+		    isAlive() {
+		      return this.alive
+		    }
+
+		    breathe() {
+		      if (!this.alive) 
+			throw new Error('is dead!')
+		    } 
+
+	  }
+	})
+
+
+
+	
+	
+Flyer:
+					
+		import { createMixableClass } from '../mixable'
+		import { Animal } from './Animal.class'
+
+		export const Flyer = createMixableClass({
+		  name: 'Flyer',
+		  inherits: [ Animal ],
+		  body: class {
+
+		    static flyerStatic() {
+		      return Flyer.staticUsingClass() + 'flyer contribution'
+		    }
+
+		    crashIntoWindow() {
+		      this.die()
+		    }
+
+		    diveDown() { return 3 }
+
+		    land() { }
+
+		    takeOff() { }
+
+		  }
+		})
+Swimmer:
 		
 
-		const { createMixableClass } = require('../mixable')  
-		const { Flyer } = require('./Flyer.class')  
-		const { Swimmer } = require('./Swimmer.class')
-	
-			
-		export const FlyingFish = createMixableClass({
-	
-		  name: 'FlyingFish',
-		  inherits: [ Flyer, Swimmer ],
+		const { createMixableClass } = require('../mixable')
+		const { Animal } = require('./Animal.class')
+
+		export const Swimmer = createMixableClass({
+		  name: 'Swimmer',
+		  inherits: [ Animal ],
 		  body: class {
+
+		    currentPosition
+		    MAX_DEPTH
+
+		    _constructor(params) {
+		      this.currentPosition = 'surface'
+		      this.MAX_DEPTH = params.maxDepth
+		    }
+
+		    getCaughtInNet() {
+		      this.die()
+		    }
+
+		    diveDown() {
+		      this.currentPosition = 'deep'
+		      return 'a string'
+		    }
+
+		    riseToSurface() {
+		      this.currentPosition = 'surface'
+		    }
+
+		    position() {
+		      return this.currentPosition
+		    }
+
+		  }
+		})
+
+Flying Fish
+
+	const { createMixableClass } = require('../mixable')  
+	const { Flyer } = require('./Flyer.class')  
+	const { Swimmer } = require('./Swimmer.class')
+
+
+	export const FlyingFish = createMixableClass({
+
+	  name: 'FlyingFish',
+	  inherits: [ Flyer, Swimmer ],
+	  body: class {
 
 	    _constructor() {
 	      this.die()
