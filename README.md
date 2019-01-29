@@ -45,7 +45,7 @@ It solves the multiple inheritance problem, and provides many useful features wh
 	
 	
 	 
-	 
+	 ```javascript
 		createMixableClass(
 		 {
 		 name: DEFAULT_CLASS_NAME,
@@ -54,6 +54,7 @@ It solves the multiple inheritance problem, and provides many useful features wh
 		 staticProps: {}
 		}
 		)
+	```
 
 	 
 	 
@@ -68,6 +69,7 @@ use case scenario from the ./examples directory in Mixable,
 	
 Animal:
 
+	    ```javascript
 	    import { createMixableClass } from '../mixable'
 
 	    export const Animal = createMixableClass({
@@ -110,6 +112,8 @@ Animal:
 
 	  }
 	})
+	
+	```
 
 
 
@@ -117,6 +121,7 @@ Animal:
 	
 Flyer:
 					
+		```javascript
 		import { createMixableClass } from '../mixable'
 		import { Animal } from './Animal.class'
 
@@ -141,9 +146,11 @@ Flyer:
 
 		  }
 		})
+		```
 Swimmer:
 		
 
+		```javascript
 		const { createMixableClass } = require('../mixable')
 		const { Animal } = require('./Animal.class')
 
@@ -179,9 +186,11 @@ Swimmer:
 
 		  }
 		})
+		```
 
 Flying Fish
 
+	```javascript
 	const { createMixableClass } = require('../mixable')  
 	const { Flyer } = require('./Flyer.class')  
 	const { Swimmer } = require('./Swimmer.class')
@@ -203,18 +212,20 @@ Flying Fish
 	      this.land()
 	      this.diveDown()
 	    }
+	    ```
   
   	
 Api references attached as properties to your new MixableClass.
 	
 MixableClass.inheritsFrom()
 	
-- ex) Swimmer.inheritsFrom(Animal) returns true
+- ex) ```javascript Swimmer.inheritsFrom(Animal) returns true ```
 	
 MixableClass.mixableMeta()
 	
-- ex) FlyingFish.getMixableMeta(this) returns 
+- ex) ```javascript FlyingFish.getMixableMeta(this) returns ```
 		
+		```javascript
 		{ name: 'FlyingFish',
 		      constructors:
 		       [ { name: 'FlyingFish', _constructor: [Function: _constructor] },
@@ -222,20 +233,23 @@ MixableClass.mixableMeta()
 			 { name: 'Flyer', _constructor: [Function] },
 			 { name: 'Animal', _constructor: [Function: _constructor] } ] 
 		}
+		```
 	
 MixableClass.constructors()
 
-- ex) Swimmer.constructors() returns
+- ex) ```javascript Swimmer.constructors() returns ```
 		
+		```javascript
 		[ { name: 'FlyingFish', _constructor: [Function: _constructor] },
 	      { name: 'Swimmer', _constructor: [Function: _constructor] },
 	      { name: 'Flyer', _constructor: [Function] },
 	      { name: 'Animal', _constructor: [Function: _constructor] } ]
+	      ```
 	      
 
 MixableClass.is() 
 	
-- ex) FlyingFish.is(Animal) returns true
+- ex) ```javascript FlyingFish.is(Animal) returns true ```
 	
 		
 	To understand an example in use, check out our test file described below in the "Contriuting" section.
