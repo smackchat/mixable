@@ -2,14 +2,14 @@
 	<img  src="MixableLogo.jpg" width="100px" height="100px"/>
 </p>
 
-<h1 align="center" style=" color: lightblue; font-size: 80px"> mixible <h1/>
+<h1 align="center" style=" color: lightblue; font-size: 80px"> mixable <h1/>
 <h3 align= "center">  <i> multiple inheritance </i> library for js </h3>
 <p align="center">
 	<img src="logo.jpg" width="222px" height="50px"/>
 </p>
 <h1>Table of Contents</h1>
 
-<h4>Why mixible?</h4> 
+<h4>Why mixable?</h4> 
 
 
 <h4>Getting Started</h4> 
@@ -24,15 +24,15 @@
 <h1> Why mixable? </h1>
 
 mixable is a open source multiple inheritance library 
-it solves the multiple inheritance problem, and provides many useful features when using a Mixible Class
+it solves the multiple inheritance problem, and provides many useful features when using a mixable Class
 
 <h1>Getting Started</h1>
 
 * SETUP 
 
-	- npm install mixible 
+	- npm install mixable 
 	
-	- yarn add mixible
+	- yarn add mixable
 
 
 * API references 
@@ -136,12 +136,12 @@ it solves the multiple inheritance problem, and provides many useful features wh
 
 
 
-The main purpose of this repository is to continue to evolve Mixible core. We are grateful to those who contribute to Mixible's system design.
+The main purpose of this repository is to continue to evolve mixable core. We are grateful to those who contribute to mixable's system design.
 
 
 * Test
 
-In the directory where mixile is held, update and run 'yarn test' to perform tests on changes and to see if you made any changes that may have broken the system.
+In the directory where mixable is held, update and run 'yarn test' to perform tests on changes and to see if you made any changes that may have broken the system.
 
 The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and an Animal. Thus we fall into multiple inheritance problem. 
 
