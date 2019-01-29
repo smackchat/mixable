@@ -3,13 +3,13 @@
 </p>
 
 <h1 align="center" style=" color: lightblue; font-size: 80px"> mixable <h1/>
-<h3 align= "center">   a <i> multiple inheritance </i> library for js </h3>
+<h3 align= "center">  <i> multiple inheritance </i> library for js </h3>
 <p align="center">
 	<img src="logo.jpg" width="222px" height="50px"/>
 </p>
 <h1>Table of Contents</h1>
 
-<h4>Why Mixible?</h4> 
+<h4>Why mixible?</h4> 
 
 
 <h4>Getting Started</h4> 
@@ -21,13 +21,10 @@
 
 * Test
 
-<h1> Why Mixable? </h1>
+<h1> Why mixable? </h1>
 
-Mixables is an open source initiative multiple inheritance library.
-Which solves the multiple inheritance problem using mixins to move functions.
-
-This is an OpenSource initiative because we could not find a more performant and easy to use library than ours, and for the ability to grow and share it with the community.
-
+mixable is a open source multiple inheritance library 
+it solves the multiple inheritance problem, and provides many useful features when using a Mixible Class
 
 <h1>Getting Started</h1>
 
