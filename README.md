@@ -117,12 +117,11 @@ This is an OpenSource initiative because we could not find a more performant and
 			 { name: 'Animal', _constructor: [Function: _constructor] } ] 
 		}
 	
+	MixableClass.is() 
+	
+		ex) FlyingFish.is(Animal) returns true
 	
 		
-	
-	instance.is() => fish.is(Animal) returns true (edited) 
-	Class.inheritsFrom()` => 
-	
 	To understand an example in use, check out our test file described below.
 	
 	
