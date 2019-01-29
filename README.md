@@ -64,7 +64,7 @@ It solves the multiple inheritance problem, and provides many useful features wh
 	- if both the child and the parent define a method of the same name, then the child will overwrite, and you 		    end up with the child's version.
 
 
-	use case scenario from the ./examples directory in Mixable,
+	Use case scenario from the ./examples directory in Mixable,
 	
 	Animal:
 	
