@@ -90,13 +90,34 @@ This is an OpenSource initiative because we could not find a more performant and
 	    }
   
   	
-	Api references within createMixableClass:
+	Api references attached as properties to your new MixableClass.
+	
+	MixableClass.inheritsFrom()
+	
+		ex) Swimmer.inheritsFrom(Animal) returns true
 	
 	
+	MixableClass.constructors()
 	
+		ex) Swimmer.constructors() returns constructors of Swimmer
+	
+	MixableClass.mixableMeta()
+	
+		ex) FlyingFish.getMixableMeta(this) returns 
+		
+		{ name: 'FlyingFish',
+		      constructors:
+		       [ { name: 'FlyingFish', _constructor: [Function: _constructor] },
+			 { name: 'Swimmer', _constructor: [Function: _constructor] },
+			 { name: 'Flyer', _constructor: [Function] },
+			 { name: 'Animal', _constructor: [Function: _constructor] } ] 
+		}
+	
+	
+		
 	
 	instance.is() => fish.is(Animal) returns true (edited) 
-	Class.inheritsFrom()` => Swimmer.inheritsFrom(Animal) returns true
+	Class.inheritsFrom()` => 
 	
 	To understand an example in use, check out our test file described below.
 	
