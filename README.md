@@ -93,15 +93,6 @@ it solves the multiple inheritance problem, and provides many useful features wh
 	
 		ex) Swimmer.inheritsFrom(Animal) returns true
 	
-	
-	MixableClass.constructors()
-	
-		ex) Swimmer.constructors() returns
-		[ { name: 'FlyingFish', _constructor: [Function: _constructor] },
-	      { name: 'Swimmer', _constructor: [Function: _constructor] },
-	      { name: 'Flyer', _constructor: [Function] },
-	      { name: 'Animal', _constructor: [Function: _constructor] } ]
-	
 	MixableClass.mixableMeta()
 	
 		ex) FlyingFish.getMixableMeta(this) returns 
@@ -113,6 +104,16 @@ it solves the multiple inheritance problem, and provides many useful features wh
 			 { name: 'Flyer', _constructor: [Function] },
 			 { name: 'Animal', _constructor: [Function: _constructor] } ] 
 		}
+	
+	MixableClass.constructors()
+	
+		ex) Swimmer.constructors() returns
+		
+		[ { name: 'FlyingFish', _constructor: [Function: _constructor] },
+	      { name: 'Swimmer', _constructor: [Function: _constructor] },
+	      { name: 'Flyer', _constructor: [Function] },
+	      { name: 'Animal', _constructor: [Function: _constructor] } ]
+	      
 	
 	MixableClass.is() 
 	
