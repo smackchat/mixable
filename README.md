@@ -40,8 +40,23 @@ This is an OpenSource initiative because we could not find a more performant and
 
 * API references 
 
-	Using **createMixableClass()** pass the Class you want as an object through the parameter.
+	Using **createMixableClass()** pass as an object through the parameter, that holds this format
 	
+	
+	
+	 
+	 
+		createMixableClass(
+		 {
+		 name: DEFAULT_CLASS_NAME,
+		 inherits: [exclass1, exclass2],
+		 body: class { // inside here create new methods for specific class, also create constructor (read details and                  example below for how to write constructor},
+		 staticProps: {}
+		}
+		)
+
+	 
+	 
 	Details about instantiating a MixableClass: 
 	- Include classes to inherit simply in an array.
 	- constructor defined with underscore '_constructor'
@@ -74,8 +89,11 @@ This is an OpenSource initiative because we could not find a more performant and
 	      this.diveDown()
 	    }
   
-  	The createMixableClass() will automatically create the **multiple inheritance** class.
-	Returns a mixable class.
+  	
+	Api references within createMixableClass:
+	
+	
+	
 	
 	instance.is() => fish.is(Animal) returns true (edited) 
 	Class.inheritsFrom()` => Swimmer.inheritsFrom(Animal) returns true
