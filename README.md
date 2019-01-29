@@ -99,7 +99,11 @@ This is an OpenSource initiative because we could not find a more performant and
 	
 	MixableClass.constructors()
 	
-		ex) Swimmer.constructors() returns constructors of Swimmer
+		ex) Swimmer.constructors() returns
+		[ { name: 'FlyingFish', _constructor: [Function: _constructor] },
+	      { name: 'Swimmer', _constructor: [Function: _constructor] },
+	      { name: 'Flyer', _constructor: [Function] },
+	      { name: 'Animal', _constructor: [Function: _constructor] } ]
 	
 	MixableClass.mixableMeta()
 	
