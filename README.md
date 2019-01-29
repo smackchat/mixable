@@ -139,7 +139,7 @@ This is an OpenSource initiative because we could not find a more performant and
 
 
 
-The main purpose of this repository is to continue to evolve Mixible core, making it faster and easier to use. We are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving Mixible.
+The main purpose of this repository is to continue to evolve Mixible core. We are grateful to those who contribute to Mixible's system design.
 
 
 * TEST
