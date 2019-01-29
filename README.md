@@ -43,8 +43,6 @@ It solves the multiple inheritance problem, and provides many useful features wh
 	which returns an instance of MixableClass
 	
 	
-	
-	 
 	 ```javascript
 		createMixableClass(
 		 {
@@ -59,173 +57,147 @@ It solves the multiple inheritance problem, and provides many useful features wh
 	 
 	 
 	Details about instantiating a MixableClass: 
-	- Include classes to inherit simply in an array.
-	- constructor defined with underscore '_constructor'
-	- the child are called before parent 
-	- if both the child and the parent define a method of the same name, then the child will overwrite, and you end up 	   with the child's version.
+		- Include classes to inherit simply in an array.
+		- constructor defined with underscore '_constructor'
+		- the child are called before parent 
+		- if both the child and the parent define a method of the same name, then the child will overwrite, and you 		    end up with the child's version.
 
 
-use case scenario from the ./examples directory in Mixable,
+	use case scenario from the ./examples directory in Mixable,
 	
-Animal:
-
-	    ```javascript
-	    import { createMixableClass } from '../mixable'
-
-	    export const Animal = createMixableClass({
-
+	Animal:
+	
+	 ```javascript
+		import { createMixableClass } from '../mixable'
+		export const Animal = createMixableClass({
 		  name: 'Animal',
 		  body: class {
-
 		    static staticProp = 'static prop'
-
 		    static staticThing() {
 		      return 'static return'
 		    }
-
 		    static staticUsingClass() {
 		      return Animal.staticThing() + 'added bit'
 		    }
-
 		    exampleProp
 		    alive = true
 		    privateProp = false
-		    //explain in doc
 		    _constructor(params) {
 			console.log("hello")
 			this.exampleProp = 'example'
 			this.alive = true
 		    }
-
 		    die() { 
 		      this.alive = false
 		    }
-
 		    isAlive() {
 		      return this.alive
 		    }
-
 		    breathe() {
 		      if (!this.alive) 
 			throw new Error('is dead!')
 		    } 
-
-	  }
-	})
-	
+		}
+		})
 	```
-
-
-
 	
 	
-Flyer:
-					
-		```javascript
+	Flyer:
+	
+	```javascript
 		import { createMixableClass } from '../mixable'
 		import { Animal } from './Animal.class'
-
 		export const Flyer = createMixableClass({
 		  name: 'Flyer',
 		  inherits: [ Animal ],
 		  body: class {
-
 		    static flyerStatic() {
 		      return Flyer.staticUsingClass() + 'flyer contribution'
 		    }
-
 		    crashIntoWindow() {
 		      this.die()
 		    }
-
 		    diveDown() { return 3 }
-
 		    land() { }
-
 		    takeOff() { }
-
 		  }
 		})
-		```
-Swimmer:
+	```
+		
+		
+	Swimmer:
 		
 
-		```javascript
+	```javascript
 		const { createMixableClass } = require('../mixable')
 		const { Animal } = require('./Animal.class')
-
 		export const Swimmer = createMixableClass({
 		  name: 'Swimmer',
 		  inherits: [ Animal ],
 		  body: class {
-
 		    currentPosition
 		    MAX_DEPTH
-
 		    _constructor(params) {
 		      this.currentPosition = 'surface'
 		      this.MAX_DEPTH = params.maxDepth
 		    }
-
 		    getCaughtInNet() {
 		      this.die()
 		    }
-
 		    diveDown() {
 		      this.currentPosition = 'deep'
 		      return 'a string'
 		    }
-
 		    riseToSurface() {
 		      this.currentPosition = 'surface'
 		    }
-
 		    position() {
 		      return this.currentPosition
 		    }
-
 		  }
 		})
-		```
+	```
 
-Flying Fish
+	Flying Fish
 
 	```javascript
-	const { createMixableClass } = require('../mixable')  
-	const { Flyer } = require('./Flyer.class')  
-	const { Swimmer } = require('./Swimmer.class')
-
-
-	export const FlyingFish = createMixableClass({
-
-	  name: 'FlyingFish',
-	  inherits: [ Flyer, Swimmer ],
-	  body: class {
-
-	    _constructor() {
-	      this.die()
-	    }
+		const { createMixableClass } = require('../mixable')  
+		const { Flyer } = require('./Flyer.class')  
+		const { Swimmer } = require('./Swimmer.class')
+		export const FlyingFish = createMixableClass({
+		  name: 'FlyingFish',
+		  inherits: [ Flyer, Swimmer ],
+		  body: class {
+		    _constructor() {
+		      this.die()
+		    }
+		    avoidPredator() {
+		      this.riseToSurface()
+		      this.takeOff()
+		      this.land()
+		      this.diveDown()
+		    } 
+	```
 	  
-	    avoidPredator() {
-	      this.riseToSurface()
-	      this.takeOff()
-	      this.land()
-	      this.diveDown()
-	    }
-	    ```
   
   	
-Api references attached as properties to your new MixableClass.
+	Api references attached as properties to your new MixableClass:
 	
-MixableClass.inheritsFrom()
+	MixableClass.inheritsFrom()
 	
-- ex) ```javascript Swimmer.inheritsFrom(Animal) returns true ```
+	- ex) 
+	```javascript
+		Swimmer.inheritsFrom(Animal) returns true
+	```
 	
-MixableClass.mixableMeta()
+	MixableClass.mixableMeta()
 	
-- ex) ```javascript FlyingFish.getMixableMeta(this) returns ```
+	- ex) 
+	```javascript 
+		FlyingFish.getMixableMeta(this) returns
+	```
 		
-		```javascript
+	```javascript
 		{ name: 'FlyingFish',
 		      constructors:
 		       [ { name: 'FlyingFish', _constructor: [Function: _constructor] },
@@ -233,23 +205,28 @@ MixableClass.mixableMeta()
 			 { name: 'Flyer', _constructor: [Function] },
 			 { name: 'Animal', _constructor: [Function: _constructor] } ] 
 		}
-		```
+	```
 	
-MixableClass.constructors()
-
-- ex) ```javascript Swimmer.constructors() returns ```
-		
-		```javascript
+	MixableClass.constructors()
+	- ex)
+	```javascript
+		Swimmer.constructors() returns 
+	```
+	
+	```javascript
 		[ { name: 'FlyingFish', _constructor: [Function: _constructor] },
 	      { name: 'Swimmer', _constructor: [Function: _constructor] },
 	      { name: 'Flyer', _constructor: [Function] },
 	      { name: 'Animal', _constructor: [Function: _constructor] } ]
-	      ```
+	```
 	      
 
-MixableClass.is() 
+	MixableClass.is() 
 	
-- ex) ```javascript FlyingFish.is(Animal) returns true ```
+	- ex)
+	```javascript
+		FlyingFish.is(Animal) returns true 
+	```
 	
 		
 	To understand an example in use, check out our test file described below in the "Contriuting" section.
