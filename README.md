@@ -2,7 +2,7 @@
 	<img  src="MixableLogo.jpg" width="100px" height="100px"/>
 </p>
 
-<h1 align="center" style=" color: lightblue; font-size: 80px"> mixable <h1/>
+<h1 align="center" style=" color: lightblue; font-size: 80px"> mixible <h1/>
 <h3 align= "center">  <i> multiple inheritance </i> library for js </h3>
 <p align="center">
 	<img src="logo.jpg" width="222px" height="50px"/>
