@@ -122,7 +122,7 @@ This is an OpenSource initiative because we could not find a more performant and
 		ex) FlyingFish.is(Animal) returns true
 	
 		
-	To understand an example in use, check out our test file described below.
+	To understand an example in use, check out our test file described below in the "Contriuting" section.
 	
 	
 	
