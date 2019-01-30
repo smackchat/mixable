@@ -7,258 +7,151 @@
 <p align="center">
 	<img src="logo.jpg" width="222px" height="50px"/>
 </p>
-<h1>Table of Contents</h1>
 
-<h4>Why mixable?</h4> 
+## Table of Content
+- Why Mixable?
+- Getting Started
+	- Setup
+	- Usage
+## Why Mixable
+Mixable is an open source library to support multiple inheritance in JavaScript
 
+## Getting Started
+### Setup: 
+Use `npm install @smackchat/mixable` or `yarn add @smackchat/mixable` to install mixables package
+### Usage:
+**All classes need to be instantiated using `createMixableClass()`**
+Let's create a `FlyingFish` class!
+First, we create an `Animal` class:
+```javascript
+import { createMixableClass } from '@smackchat/mixable'
+export const Animal = createMixableClass({
+  name: 'Animal',
+  body: class {
+    static staticProp = 'static prop'
+    static staticThing() {
+      return 'static return'
+    }
+    static staticUsingClass() {
+      return Animal.staticThing() + 'added bit'
+    }
+    exampleProp
+    alive = true
+    privateProp = false
+    _constructor(params) {
+      this.exampleProp = 'example'
+      this.alive = true
+    }
+    die() { 
+      this.alive = false
+    }
+    isAlive() {
+      return this.alive
+    }
+    breathe() {
+      if (!this.alive) 
+      throw new Error('is dead!')
+    } 
+  }
+})
+```
+Now we'll need a `Flyer` class that inherits from our `Animal`:
+```javascript
+import { createMixableClass } from '@smackchat/mixable'
+import { Animal } from './Animal.class'
+export const Flyer = createMixableClass({
+  name: 'Flyer',
+  inherits: [ Animal ],
+  body: class {
+    static flyerStatic() {
+      return Flyer.staticUsingClass() + 'flyer contribution'
+    }
+    crashIntoWindow() {
+      this.die()
+    }
+    diveDown() { return 3 }
+    land() { }
+    takeOff() { }
+  }
+})
+```
+and Now a `Swimmer` class that inherits from  `Animal`:
+```javascript
+const { createMixableClass } = require('@smackchat/mixable')
+const { Animal } = require('./Animal.class')
+export const Swimmer = createMixableClass({
+  name: 'Swimmer',
+  inherits: [ Animal ],
+  body: class {
+    currentPosition
+    MAX_DEPTH
+    _constructor(params) {
+      this.currentPosition = 'surface'
+      this.MAX_DEPTH = params.maxDepth
+    }
+    getCaughtInNet() {
+      this.die()
+    }
+    diveDown() {
+      this.currentPosition = 'deep'
+      return 'a string'
+    }
+    riseToSurface() {
+      this.currentPosition = 'surface'
+    }
+    position() {
+      return this.currentPosition
+    }
+  }
+})
+```
+And finally, we can create our `FlyingFish` class that inherits from `Flyer` and `Swimmer`:
+```javascript
+const { MixableClass } =  require('@smackchat/mixable')
+const { Flyer } =  require('./Flyer.class')
+const { Swimmer } =  require('./Swimmer.class')
+export const FlyingFish =  MixableClass({
+  name: 'FlyingFish',
+  inherits: [ Flyer, Swimmer ],
+  body: class {
+    _constructor() {
+      this.die()
+    }
+    avoidPredator() {
+      this.riseToSurface()
+      this.takeOff()
+      this.land()
+      this.diveDown()
+    }
+  }
+})
+```
+**Useful methods of Mixables:**
+```javascript
+// Instantiation:
+const FishyTheFish = new FlyingFish({ name: 'fishy the fish', maxDepth: 200 })
 
-<h4>Getting Started</h4> 
+// Useful methods:
 
-* Setup
-* Using  
-
-<h4>Contributing</h4>
-
-* Test
-
-<h1> Why mixable? </h1>
-
-mixable is a open source multiple inheritance library.
-
-It solves the multiple inheritance problem, and provides many useful features when using a mixable Class
-
-<h1>Getting Started</h1>
-
-* SETUP 
-
-	- npm install mixable 
-	
-	- yarn add mixable
-
-
-* API references 
-
-	Using **createMixableClass()** pass as an object through the parameter, that holds this format
-	
-	which returns an instance of MixableClass
-	
-	
-	 ```javascript
-		createMixableClass(
-		 {
-		 name: DEFAULT_CLASS_NAME,
-		 inherits: [exclass1, exclass2],
-		 body: class { // inside here create new methods for specific class, also create constructor (read details and                  example below for how to write constructor0},
-		 staticProps: {}
-		}
-		)
-	```
-
-	 
-	 
-	Details about instantiating a MixableClass: 
-	
-	- Include classes to inherit simply in an array.
-	- constructor defined with underscore '_constructor'
-	- the child are called before parent 
-	- if both the child and the parent define a method of the same name, then the child will overwrite, and you 		    end up with the child's version.
-
-
-	Use case scenario from the ./examples directory in Mixable,
-	
-	Animal:
-	
-	 ```javascript
-		import { createMixableClass } from '../mixable'
-		export const Animal = createMixableClass({
-		  name: 'Animal',
-		  body: class {
-		    static staticProp = 'static prop'
-		    static staticThing() {
-		      return 'static return'
-		    }
-		    static staticUsingClass() {
-		      return Animal.staticThing() + 'added bit'
-		    }
-		    exampleProp
-		    alive = true
-		    privateProp = false
-		    _constructor(params) {
-			console.log("hello")
-			this.exampleProp = 'example'
-			this.alive = true
-		    }
-		    die() { 
-		      this.alive = false
-		    }
-		    isAlive() {
-		      return this.alive
-		    }
-		    breathe() {
-		      if (!this.alive) 
-			throw new Error('is dead!')
-		    } 
-		}
-		})
-	```
-	
-	
-	Flyer:
-	
-	```javascript
-		import { createMixableClass } from '../mixable'
-		import { Animal } from './Animal.class'
-		export const Flyer = createMixableClass({
-		  name: 'Flyer',
-		  inherits: [ Animal ],
-		  body: class {
-		    static flyerStatic() {
-		      return Flyer.staticUsingClass() + 'flyer contribution'
-		    }
-		    crashIntoWindow() {
-		      this.die()
-		    }
-		    diveDown() { return 3 }
-		    land() { }
-		    takeOff() { }
-		  }
-		})
-	```
-		
-		
-	Swimmer:
-		
-
-	```javascript
-		const { createMixableClass } = require('../mixable')
-		const { Animal } = require('./Animal.class')
-		export const Swimmer = createMixableClass({
-		  name: 'Swimmer',
-		  inherits: [ Animal ],
-		  body: class {
-		    currentPosition
-		    MAX_DEPTH
-		    _constructor(params) {
-		      this.currentPosition = 'surface'
-		      this.MAX_DEPTH = params.maxDepth
-		    }
-		    getCaughtInNet() {
-		      this.die()
-		    }
-		    diveDown() {
-		      this.currentPosition = 'deep'
-		      return 'a string'
-		    }
-		    riseToSurface() {
-		      this.currentPosition = 'surface'
-		    }
-		    position() {
-		      return this.currentPosition
-		    }
-		  }
-		})
-	```
-
-	Flying Fish
-
-	```javascript
-		const { createMixableClass } = require('../mixable')  
-		const { Flyer } = require('./Flyer.class')  
-		const { Swimmer } = require('./Swimmer.class')
-		export const FlyingFish = createMixableClass({
-		  name: 'FlyingFish',
-		  inherits: [ Flyer, Swimmer ],
-		  body: class {
-		    _constructor() {
-		      this.die()
-		    }
-		    avoidPredator() {
-		      this.riseToSurface()
-		      this.takeOff()
-		      this.land()
-		      this.diveDown()
-		    } 
-	```
-	  
+FishyTheFish.className() 
+  // returns 'FlyingFish'
   
-  	
-	Api references attached as properties to your new MixableClass:
-	
-	MixableClass.inheritsFrom()
-	
-	- ex) 
-	```javascript
-		Swimmer.inheritsFrom(Animal) returns true
-	```
-	
-	MixableClass.mixableMeta()
-	
-	- ex) 
-	```javascript 
-		FlyingFish.getMixableMeta(this) returns
-	```
-		
-	```javascript
-		{ name: 'FlyingFish',
-		      constructors:
-		       [ { name: 'FlyingFish', _constructor: [Function: _constructor] },
-			 { name: 'Swimmer', _constructor: [Function: _constructor] },
-			 { name: 'Flyer', _constructor: [Function] },
-			 { name: 'Animal', _constructor: [Function: _constructor] } ] 
-		}
-	```
-	
-	MixableClass.constructors()
-	- ex)
-	```javascript
-		Swimmer.constructors() returns 
-	```
-	
-	```javascript
-		[ { name: 'FlyingFish', _constructor: [Function: _constructor] },
-	      { name: 'Swimmer', _constructor: [Function: _constructor] },
-	      { name: 'Flyer', _constructor: [Function] },
-	      { name: 'Animal', _constructor: [Function: _constructor] } ]
-	```
-	      
+FishyTheFish.constructors() 
+  // returns an array of its parents name and constructors
+  
+  // In this example the order will be:
+FishyTheFish.constructors()[0].name // returns 'Animal'
+FishyTheFish.constructors()[1].name // returns 'Swimmer'
+FishyTheFish.constructors()[2].name // returns 'Flyer'
+FishyTheFish.constructors()[3].name // returns 'FlyingFish'
 
-	MixableClass.is() 
-	
-	- ex)
-	```javascript
-		FlyingFish.is(Animal) returns true 
-	```
-	
-		
-	To understand an example in use, check out our test file described below in the "Contriuting" section.
-	
-	
-	
-*  Edge Cases
+FishyTheFish.constructors()[0]._constructor()
+  // calls the contstructor of Animal
 
-
-	- edge case ex) extend on the functionality of parent. in java is handeld through "super" call. This package fully 	   replaces this method. There are tricks
-
-
- 
-      
-
-<h1>Contributing</h1>
-
-
-
-The main purpose of this repository is to continue to evolve mixable core. We are grateful to those who contribute to mixable's system design.
-
-
-* Test
-
-In the directory where mixable is held, update and run 'yarn test' to perform tests on changes and to see if you made any changes that may have broken the system.
-
-The Test file clearly presents the problem we are trying to solve. Lets say you have a class Swimmer that extends Animal. However, the class FlyingFish is both a Swimmer a Flyer and an Animal. Thus we fall into multiple inheritance problem. 
-
-
-
-
-
-
-
+// You can also check for inheritance:
+FishyTheFish.inheritsFrom(Animal) // returns true
+FishyTheFish.is(Animal) // returns true
+```
+**Important Information**
+- The children will get called before the parent
+- If a child and a parent define a method of the same name, then the child's method will overwrite the parent.
