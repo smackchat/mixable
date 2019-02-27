@@ -2,7 +2,6 @@ import { copyMembers } from './copy-members.functions'
 
 const META_KEY = '__mixable_meta'
 
-console.log("file being run")
 /**
  * initializes the mixable metadata IN PLACE
  * @param constructor 
@@ -56,7 +55,6 @@ export function applySelf(Mixable, layer){
   
   const meta = Mixable.mixableMeta()
 
-  console.log("about to call unshift")
   meta.constructors.unshift({ 
     name: Mixable.className(),
     _constructor: layer.prototype._constructor || function(){}
@@ -77,7 +75,6 @@ export function callConstructors(
   instance = {},
   args = []
 ) {
-  console.log("about to call")
   // @todo: this is too much back and forth between proto and constructor
   getMixableMeta(Object.getPrototypeOf(instance).constructor)
     .constructors

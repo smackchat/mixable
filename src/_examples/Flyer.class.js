@@ -22,6 +22,3 @@ export const Flyer = createMixableClass({
   
   }
 })
-//child called befroe parent 
-// _constructor defined with underscore
-//if both the child and the parent define a method of the same name, then the child will overwrite, and end up with the child's version.

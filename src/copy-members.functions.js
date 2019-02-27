@@ -1,4 +1,4 @@
-console.log("copy member being run")
+
 const staticPropsToIgnore = [
   
   // js stuff

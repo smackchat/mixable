@@ -24,16 +24,15 @@ export function createMixableClass({
   body = class {},
   staticProps = {}
 }) {
-  //creates function based on name, and also call mixale class constructor
+  
   const classFactory = new Function('mixableClassConstructor', `
     return function ${name}(...args) {
       return mixableClassConstructor.call(this, ...args)
     }
   `)
-    
+
   const MixableClass = classFactory(function(...args) {
     try {
-
       callConstructors(this, args)
     } catch(e) {
       throw new Error(`error constructing ${MixableClass.className()}: ${e.message}`)
@@ -50,7 +49,6 @@ export function createMixableClass({
   }
   
   MixableClass.constructors = function () {
-    console.log(this.mixableMeta().constructors)
     return this.mixableMeta().constructors
   }
 

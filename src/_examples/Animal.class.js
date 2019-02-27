@@ -17,9 +17,8 @@ export const Animal = createMixableClass({
     exampleProp
     alive = true
     privateProp = false
-    //explain in doc
+
     _constructor(params) {
-        console.log("hello")
         this.exampleProp = 'example'
         this.alive = true
     }

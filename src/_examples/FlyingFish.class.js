@@ -8,7 +8,6 @@ export const FlyingFish = createMixableClass({
   body: class {
 
     _constructor() {
-      console.log("asd")
       this.die()
     }
   

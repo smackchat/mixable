@@ -7,7 +7,6 @@ describe('createMixableClass()', () => {
     expect(Animal.staticThing()).toBe('static return')
     expect(Animal.staticUsingClass()).toBe('static return' + 'added bit')
     expect(Animal.staticProp).toBe('static prop')
-    console.log("hello1")
     expect(Animal.className()).toBe('Animal')
     expect(Animal.constructors().length).toBe(1)
     expect(Animal.constructors()[0].name).toBe('Animal')
@@ -32,7 +31,6 @@ describe('createMixableClass()', () => {
 
     expect(Swimmer.staticThing()).toBe('static return')
     expect(Swimmer.staticProp).toBe('static prop')
-    console.log("hello2")
     expect(Swimmer.inheritsFrom(Animal)).toBe(true)
     expect(Swimmer.inheritsFrom(Swimmer)).toBe(true)
     expect(Swimmer.inheritsFrom(Flyer)).toBe(false)
@@ -98,8 +96,6 @@ describe('createMixableClass()', () => {
     expect(FlyingFish.constructors()[1].name === 'Swimmer')
     expect(FlyingFish.constructors()[2].name === 'Flyer')
     expect(FlyingFish.constructors()[3].name === 'FlyingFish')
-    console.log("hello3")
-    console.log(flyingfish)
     expect(flyingfish.exampleProp).toBe('example') //  assigned in animal _constructor
     expect(flyingfish.currentPosition).toBe('surface') //  assigned in swimmer _constructor
     // Animal.die() called in flyingfish _constructor, 
