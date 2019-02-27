@@ -1,12 +1,6 @@
-<p align="center" >
-	<img  src="MixableLogo.jpg" width="100px" height="100px"/>
-</p>
+# 
 
-<h1 align="center" style=" color: lightblue; font-size: 80px"> mixable <h1/>
-<h3 align= "center">  <i> multiple inheritance </i> library for js </h3>
-<p align="center">
-	<img src="logo.jpg" width="222px" height="50px"/>
-</p>
+<h1 style="display:flex; align-items: center; color: lightblue; font-size: 30px"> <img src="assets/fishy-the-fish.jpg" height='40' alt='Redux Logo' aria-label='redux.js.org' />mixable <h1/>
 
 ## Table of Content
 - Why Mixable?
