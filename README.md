@@ -1,6 +1,4 @@
-# 
-
-<h1 style="display:flex; align-items: center; color: lightblue; font-size: 30px"> <img src="assets/fishy-the-fish.jpg" height='40' alt='Redux Logo' aria-label='redux.js.org' />mixable <h1/>
+<h1 style="display:flex; align-items: center; color: lightblue; font-size: 30px"> <img src="assets/fishy-the-fish.jpg" height='45' /> mixable <h1/>
 
 ## Table of Content
 - Why Mixable?
