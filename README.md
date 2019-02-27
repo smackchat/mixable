@@ -5,43 +5,37 @@ It allows you to make classes that inherit from multiple parents.
 
 ### Setup
 `npm install @smackchat/mixable` or `yarn add @smackchat/mixable` 
-### Usage:
-**All classes need to be instantiated using `createMixableClass()`**
 
-Let's create a `FlyingFish` class!
-First, we create an `Animal` class:
+### Usage:
+
+`MixableClasses` can only inherit from other `MixableClasses`, and are created with `createMixableClass()`
+
+Let's create an `Animal` class:
 ```javascript
 import { createMixableClass } from '@smackchat/mixable'
-export const Animal = createMixableClass({
+
+const Animal = createMixableClass({
   name: 'Animal',
   body: class {
-    static staticProp = 'static prop'
-    static staticThing() {
-      return 'static return'
-    }
-    static staticUsingClass() {
-      return Animal.staticThing() + 'added bit'
-    }
-    exampleProp
+  
     alive = true
-    privateProp = false
-    _constructor(params) {
-      this.exampleProp = 'example'
-      this.alive = true
+    
+    die() {
+      this.alive = false 
     }
-    die() { 
-      this.alive = false
-    }
-    isAlive() {
-      return this.alive
-    }
-    breathe() {
-      if (!this.alive) 
-      throw new Error('is dead!')
-    } 
+    
   }
 })
 ```
+
+We can instantiate it like a normal class.
+```javascript
+const animal = new Animal()
+console.log(animal.alive) // true
+animal.die()
+console.log(animal.alive) // false
+```
+
 Now we'll need a `Flyer` class that inherits from our `Animal`:
 ```javascript
 import { createMixableClass } from '@smackchat/mixable'
