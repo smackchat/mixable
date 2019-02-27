@@ -18,7 +18,9 @@ const Animal = createMixableClass({
   name: 'Animal',
   body: class {
   
-    alive = true
+    _constructor() {
+      this.alive = false
+    }
     
     die() {
       this.alive = false 
@@ -36,7 +38,35 @@ animal.die()
 console.log(animal.alive) // false
 ```
 
-Now we'll need a `Flyer` class that inherits from our `Animal`:
+Due to ECMAScript `class` limitations, we use `_constructor()` instead of `constructor()`.
+For the same reason, properties assigned in the class body will be ignored.
+```javascript
+const Animal = createMixableClass({
+  name: 'Animal',
+  body: class {
+    
+    // WRONG: will be ignored
+    alive = false
+    
+    // WRONG: will be ignored
+    constructor() {
+      this.alive = false
+    }
+    
+    // CORRECT
+    _constructor() {
+      this.alive = false
+    }
+    
+    die() {
+      this.alive = false 
+    }
+    
+  }
+})
+```
+
+Now we can make a class `Swimmer` that inherits from `Animal`:
 ```javascript
 import { createMixableClass } from '@smackchat/mixable'
 import { Animal } from './Animal.class'
