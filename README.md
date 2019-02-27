@@ -95,7 +95,7 @@ export const Swimmer = createMixableClass({
 })
 ```
 
-When we can instantiate it, both `_constructor()` functions are called.
+When we instantiate it, both `_constructor()` functions are called.
 ```javascript
 console.log(Swimmer.inheritsFrom(Animal)) // true
 console.log(Swimmer.inheritsFrom(Swimmer)) // true
