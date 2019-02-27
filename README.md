@@ -1,6 +1,6 @@
 # <img src="assets/fishy-the-fish.jpg" height='50' /> mixable 
 
-*mixable* is a **multiple inheritance library for JavaScript.** <br/>
+**Multiple inheritance library for JavaScript.** <br/>
 It allows you to make classes that inherit from multiple parents.
 
 ### Setup
