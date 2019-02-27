@@ -1,6 +1,6 @@
 {
   "name": "@smackchat/mixable",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "Multiple inheritance for JavaScript",
   "main": "dist/mixable.js",
   "scripts": {
@@ -41,7 +41,7 @@
       "react-app"
     ]
   },
-  "dependencies": {
+  "devDependencies": {
     "babel-core": "6.26.0",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",

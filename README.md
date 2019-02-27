@@ -1,4 +1,4 @@
-# <img src="assets/fishy-the-fish.jpg" height='50' /> mixable 
+# <img src="https://i.ibb.co/DzL7rm8/fishy-the-fish.png" height='50' /> mixable 
 
 **Multiple inheritance library for JavaScript.** <br/>
 It allows you to make classes that inherit from multiple parents.
