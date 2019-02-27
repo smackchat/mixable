@@ -1,20 +1,13 @@
 # <img src="assets/fishy-the-fish.jpg" height='50' /> mixable 
 
-**mixable** is an 
+*mixable* is a **multiple inheritance library for JavaScript.** <br/>
+It allows you to make classes that inherit from multiple parents.
 
-## Table of Content
-- Why Mixable?
-- Getting Started
-	- Setup
-	- Usage
-## Why Mixable
-Mixable is an open source library to support multiple inheritance in JavaScript
-
-## Getting Started
-### Setup: 
-Use `npm install @smackchat/mixable` or `yarn add @smackchat/mixable` to install mixables package
+### Setup
+`npm install @smackchat/mixable` or `yarn add @smackchat/mixable` 
 ### Usage:
 **All classes need to be instantiated using `createMixableClass()`**
+
 Let's create a `FlyingFish` class!
 First, we create an `Animal` class:
 ```javascript
