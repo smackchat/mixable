@@ -24,8 +24,7 @@ const Animal = createMixableClass({
   
     _constructor() {
       this.alive = false
-      if (Animal.totalNumber)
-        Animal.totalNumber++
+      if (Animal.totalNumber) Animal.totalNumber++
       else Animal.totalNumber = 1
     }
     
