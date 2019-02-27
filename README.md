@@ -1,4 +1,4 @@
-# <img src="assets/fishy-the-fish.jpg" height='40' /> mixable 
+# <img src="assets/fishy-the-fish.jpg" height='50' /> mixable 
 
 **mixable** is an 
 
