@@ -1,5 +1,5 @@
 {
-  "name": "@smackchat/mixable",
+  "name": "@blast-engine/mixable",
   "version": "0.0.2",
   "description": "Multiple inheritance for JavaScript",
   "main": "dist/mixable.js",
