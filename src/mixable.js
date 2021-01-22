@@ -24,21 +24,17 @@ export function createMixableClass({
   body = class {},
   staticProps = {}
 }) {
-  
-  const classFactory = new Function('mixableClassConstructor', `
-    return function ${name}(...args) {
-      return mixableClassConstructor.call(this, ...args)
-    }
-  `)
 
-  const MixableClass = classFactory(function(...args) {
+  const MixableClass = function(...args) {
     try {
       callConstructors(this, args)
     } catch(e) {
       throw new Error(`error constructing ${MixableClass.className()}: ${e.message}`)
     }
     return this
-  })
+  }
+  
+  MixableClass.className = name
 
   MixableClass.mixableMeta = function () {
     return getMixableMeta(this)
