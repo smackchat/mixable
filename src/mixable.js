@@ -25,15 +25,39 @@ export function createMixableClass({
   staticProps = {}
 }) {
 
-  const MixableClass = function(...args) {
-    try {
-      callConstructors(this, args)
-    } catch(e) {
-      throw new Error(`error constructing ${MixableClass.className()}: ${e.message}`)
-    }
-    return this
-  }
+  let MixableClass
   
+  const USE_NAMED_CLASS = true
+  if (USE_NAMED_CLASS) {
+
+    const classFactory = new Function('mixableClassConstructor', `
+      return function ${name}(...args) {
+        return mixableClassConstructor.call(this, ...args)
+      }
+    `)
+
+    MixableClass = classFactory(function(...args) {
+      try {
+        callConstructors(this, args)
+      } catch(e) {
+        throw new Error(`error constructing ${MixableClass.className()}: ${e.message}`)
+      }
+      return this
+    })
+
+  } else {
+
+    MixableClass = function(...args) {
+      try {
+        callConstructors(this, args)
+      } catch(e) {
+        throw new Error(`error constructing ${MixableClass.className()}: ${e.message}`)
+      }
+      return this
+    }
+
+  }
+
   MixableClass.className = name
 
   MixableClass.mixableMeta = function () {
