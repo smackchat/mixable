@@ -4,7 +4,7 @@
 It allows you to make classes that inherit from multiple parents.
 
 ### Setup
-`npm install @smackchat/mixable` or `yarn add @smackchat/mixable` 
+`npm install @blast-engine/mixable` or `yarn add @blast-engine/mixable` 
 
 ### Usage:
 
