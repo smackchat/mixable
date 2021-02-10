@@ -12,7 +12,7 @@ It allows you to make classes that inherit from multiple parents.
 
 Let's create an `Animal` class:
 ```javascript
-import { createMixableClass } from '@smackchat/mixable'
+import { createMixableClass } from '@blast-engine/mixable'
 
 const Animal = createMixableClass({
   name: 'Animal',
@@ -74,7 +74,7 @@ export const Animal = createMixableClass({
 
 Now we can make a class `Swimmer` that inherits from `Animal`:
 ```javascript
-import { createMixableClass } from '@smackchat/mixable'
+import { createMixableClass } from '@blast-engine/mixable'
 import { Animal } from './Animal.class'
 
 export const Swimmer = createMixableClass({
@@ -114,7 +114,7 @@ console.log(shark.alive) // false
 
 We can inherit from multiple classes.
 ```javascript
-const { createMixableClass } = require('@smackchat/mixable')
+const { createMixableClass } = require('@blast-engine/mixable')
 const { Swimmer } = require('./Swimmer.class')
 const { Flyer } = require('./Flyer.class')
 
